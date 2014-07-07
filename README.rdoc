@@ -9,10 +9,25 @@
 
 # listing
 # - belongs to owners(users)
-  # - t.integer owner_id 
-# - belongs to neighborhoods
+  # - t.integer owner_id        done
+# - belongs to neighborhoods    done
 # - has many renters(users)
-  # - t.integer renter_id 
+  # - t.integer renter_id       done
 
 # users
 # - has many rooms
+
+
+This lab will focus on associations, scope, class methods, instance methods, and using factory girl to seed data.  It uses unit tests to tests all the above.
+
+features to test for
+- cities list total openings
+- neighborhoods list total openings
+- most popular city
+- most popular neighborhood
+- show whether an apartment is available
+
+validations maybe? (make these instance methods)
+- owners cannot rent own apartments
+- renters cannot rent two apartments at the same time
+- a listing cannot be booked by two renters at the same time

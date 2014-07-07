@@ -1,6 +1,7 @@
 class AddColumnsToListing < ActiveRecord::Migration
   def change
-    add_column :listings, references: :neighborhoods
-    add_column :listings, references: :owners
+    add_column :listings, :neighborhood_id, :integer
+    add_column :listings, :owner_id, :integer
+    add_column :listings, :renter_id, :integer
   end
 end
