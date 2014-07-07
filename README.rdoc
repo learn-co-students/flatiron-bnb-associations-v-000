@@ -21,11 +21,11 @@
 This lab will focus on associations, scope, class methods, instance methods, and using factory girl to seed data.  It uses unit tests to tests all the above.
 
 features to test for
-- cities list total openings
-- neighborhoods list total openings
-- most popular city
-- most popular neighborhood
-- show whether an apartment is available
+- cities list total openings                                  City
+- most popular city                                           City
+- neighborhoods list total openings                           Neighborhood
+- most popular neighborhood                                   Neighborhood
+- show whether an apartment is available                      Listing
 
 validations maybe? (make these instance methods)
 - owners cannot rent own apartments
