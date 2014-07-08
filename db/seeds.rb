@@ -4,4 +4,12 @@
 # Examples:
 #
   cities = City.create([{ name: 'NYC' }, { name: 'San Fransisco' }])
-  Mayor.create(name: 'Emanuel', city: cities.first)
+
+  Neighborhood.create(name: 'Fi Di', city: cities.first)
+  Neighborhood.create(name: 'Green Point', city: cities.first)
+  Neighborhood.create(name: 'Brighton Beach', city: cities.first)
+  Neighborhood.create(name: 'Pacific Heights', city: cities.last)
+  Neighborhood.create(name: 'Mission District', city: cities.last)
+
+  users =  10.times {|i| User.create(name: "User_#{i}")}
+
