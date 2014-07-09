@@ -7,7 +7,7 @@ level: advanced
 resources: 0
 ---
 
-# Flatiron-bnb
+# Flatiron-bnb: Associations
 
 We're going to build Airbnb. Really.
 

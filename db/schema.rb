@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707175316) do
+ActiveRecord::Schema.define(version: 20140709193156) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -21,19 +21,39 @@ ActiveRecord::Schema.define(version: 20140707175316) do
 
   create_table "listings", force: true do |t|
     t.string   "address"
-    t.integer  "rooms"
+    t.string   "listing_type"
+    t.string   "title"
+    t.text     "description"
+    t.decimal  "price",           precision: 8, scale: 2
+    t.integer  "neighborhood_id"
+    t.integer  "host_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "neighborhood_id"
-    t.integer  "owner_id"
-    t.integer  "renter_id"
   end
 
   create_table "neighborhoods", force: true do |t|
     t.string   "name"
+    t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "city_id"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.date     "checkin"
+    t.date     "checkout"
+    t.integer  "listing_id"
+    t.integer  "guest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.text     "description"
+    t.integer  "rating"
+    t.integer  "guest_id"
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
