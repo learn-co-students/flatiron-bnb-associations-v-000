@@ -1,5 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe User, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe User do
+  xit 'has a name' do 
+  end
+
+  xit 'as a host has many listings' do 
+  end
+
+  xit 'as a guest has many reservations' do 
+  end
+
+  xit 'as a guest has written many reviews' do 
+  end
+
 end

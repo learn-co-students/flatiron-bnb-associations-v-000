@@ -1,5 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Review, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Review do
+  xit 'has a description' do 
+  end
+
+  xit 'has a rating' do 
+  end
+
+  xit 'belongs to a guest' do 
+  end
+
+  xit 'belongs to a listing' do 
+  end
+
 end

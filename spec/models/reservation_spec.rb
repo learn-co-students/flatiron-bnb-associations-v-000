@@ -1,5 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Reservation, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Reservation do
+  xit 'has a checkin time' do 
+  end
+
+  xit 'has a checkout time' do 
+  end
+
+  xit 'belongs to a guest' do 
+  end
+
+  xit 'belongs to a listing' do 
+  end
+
 end
