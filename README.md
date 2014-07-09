@@ -3,18 +3,32 @@ tags: rails, full application
 language: ruby
 unit: rails
 module: Building Complete Apps
-level: beginner
+level: advanced
 resources: 0
 ---
 
 # Flatiron-bnb
 
+We're going to build Airbnb. Really.
+
 Lab iteration ideas:
-1. model associations, migrations, set-up (no scaffold)
+1. advanced model associations, migrations, making seed
 2. instance and class methods
 3. building out controllers and forms using form_helpers
-4. Omniauth authorization with Devise
+4. Omniauth authorization
+5. Uploading photos to listing (Carrierwave)
+6. Turn it into an API?
 
+#Models
+
+City
+Neighborhood
+Listing
+Review
+Reservation
+User
+
+#TODO
 
 This lab will focus on associations, scope, class methods, instance methods, and using factory girl to seed data.  It uses unit tests to tests all the above.
 
