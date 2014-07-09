@@ -1,21 +1,19 @@
-# Schema I need to make
-# city
-# - has many neighborhoods
-# - has many listings through neighborhoods
+---
+tags: rails, full application
+language: ruby
+unit: rails
+module: Building Complete Apps
+level: beginner
+resources: 0
+---
 
-# neighborhoods
-# - has many listings
-# - has many users through rooms
+# Flatiron-bnb
 
-# listing
-# - belongs to owners(users)
-  # - t.integer owner_id        done
-# - belongs to neighborhoods    done
-# - has many renters(users)
-  # - t.integer renter_id       done
-
-# users
-# - has many rooms
+Lab iteration ideas:
+1. model associations, migrations, set-up (no scaffold)
+2. instance and class methods
+3. building out controllers and forms using form_helpers
+4. Omniauth authorization with Devise
 
 
 This lab will focus on associations, scope, class methods, instance methods, and using factory girl to seed data.  It uses unit tests to tests all the above.
