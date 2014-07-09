@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :listings
-  has_many :renters, through: :listings
-    
-  # has_many :renter_listings, :class_name => "Renter", :foreign_key => "renter_id"  
-  # has_many :renters, :through => :renters, :source => :user  
+  has_many :guest_listings
+  has_many :listings, :through => :guest_listings
+  has_many :guests, :class_name => "User", :through => :listings 
+  
 end
