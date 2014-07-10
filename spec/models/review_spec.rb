@@ -1,16 +1,20 @@
 require 'rails_helper'
 
 describe Review do
-  xit 'has a description' do 
+  it 'has a description' do
+    expect(@review1.description).to eq("This place was great!") 
   end
 
-  xit 'has a rating' do 
+  it 'has a rating' do
+    expect(@review1.rating).to eq(5) 
   end
 
-  xit 'belongs to a guest' do 
+  it 'belongs to a guest' do
+    expect(@review1.guest).to eq(@logan) 
   end
 
-  xit 'belongs to a listing' do 
+  it 'belongs to a listing' do
+    expect(@review1.listing).to eq(@listing1) 
   end
 
 end

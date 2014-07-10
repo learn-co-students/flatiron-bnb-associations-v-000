@@ -1,16 +1,20 @@
 require 'rails_helper'
 
 describe User do
-  xit 'has a name' do 
+  it 'has a name' do
+    expect(@katie.name).to eq("Katie") 
   end
 
-  xit 'as a host has many listings' do 
+  it 'as a host has many listings' do
+    expect(@amanda.listings).to eq([@listing1]) 
   end
 
-  xit 'as a guest has many reservations' do 
+  it 'as a guest has many reservations' do
+    expect(@tristan.reservations).to eq([@reservation2])
   end
 
-  xit 'as a guest has written many reviews' do 
+  it 'as a guest has written many reviews' do
+    expect(@avi.reviews).to eq([@review3])
   end
 
 end
