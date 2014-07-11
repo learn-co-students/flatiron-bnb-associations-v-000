@@ -13,8 +13,8 @@ describe Review do
     expect(@review1.guest).to eq(@logan) 
   end
 
-  it 'belongs to a listing' do
-    expect(@review1.listing).to eq(@listing1) 
+  it 'belongs to a reservation' do
+    expect(@review1.reservation).to eq(@reservation1) 
   end
 
 end

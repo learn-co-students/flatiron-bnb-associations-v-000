@@ -29,16 +29,22 @@ describe Listing do
     expect(@listing2.host.name).to eq('Katie')
   end
 
-  it 'has many reviews' do 
-    expect(@listing3.reviews).to eq([@review3])
-  end
-
-  it 'has many reservations' do 
-    expect(@listing3.reservations).to eq([@reservation3])
+  it 'has many reservations' do
+    vaca_res = Reservation.create(checkin: '2015-03-15', checkout: '2015-03-20', listing_id: @listing3.id, guest_id: 2)
+    staycation = Reservation.create(checkin: '2015-04-10', checkout: '2015-04-15', listing_id: @listing3.id, guest_id: 1)
+    expect(@listing3.reservations).to include(vaca_res)
+    expect(@listing3.reservations).to include(staycation)
   end
 
   it 'knows about all of its guests' do 
-    expect(@listing3.guests).to eq([@avi])
+    vaca_res = Reservation.create(checkin: '2015-03-15', checkout: '2015-03-20', listing_id: @listing3.id, guest_id: 1)
+    staycation = Reservation.create(checkin: '2015-04-10', checkout: '2015-04-15', listing_id: @listing3.id, guest_id: 2)
+    expect(@listing3.guests.collect{|g| g.id }).to include(1)
+    expect(@listing3.guests.collect{|g| g.id }).to include(2)
+  end
+
+  it 'has many reviews through reservations' do 
+    expect(@listing1.reviews).to include(@review1)
   end
 
 end

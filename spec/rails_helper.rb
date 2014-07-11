@@ -68,16 +68,18 @@ RSpec.configure do |config|
 
     @listing3 = Listing.create(address: '44 Ridge Lane', listing_type: "whole house", title: "Beautiful Home on Mountain", description: "Whole house for rent on mountain. Many bedrooms.", price: 200.00, neighborhood_id: Neighborhood.find_by(id: 3).id, host_id: User.find_by(id: 3).id)
 
-    @reservation1 = Reservation.create(checkin: '2014-04-25', checkout: '2014-04-30', listing_id: Listing.first.id, guest_id: User.find_by(id: 4).id)
+    @listing4 = Listing.create(address: '4782 Yaya Lane', listing_type: "private room", title: "Beautiful Room in awesome house", description: "Art collective hosue.", price: 400.00, neighborhood_id: Neighborhood.find_by(:name => "Pacific Heights").id, host_id: User.find_by(id: 3).id)
+
+    @reservation1 = Reservation.create(checkin: '2014-04-25', checkout: '2014-04-30', listing_id: 1, guest_id: 4)
 
     @reservation2 = Reservation.create(checkin: '2014-03-10', checkout: '2014-03-25', listing_id: Listing.find_by(id: 2).id, guest_id: User.find_by(id: 5).id)
 
     @reservation3 = Reservation.create(checkin: '2014-06-02', checkout: '2014-06-30', listing_id: Listing.last.id, guest_id: User.find_by(id: 6).id)
 
-    @review1 = Review.create(description: "This place was great!", rating: 5, guest_id: User.find_by(id: 4).id, listing_id: Listing.first.id)
+    @review1 = Review.create(description: "This place was great!", rating: 5, guest_id: User.find_by(id: 4).id, reservation_id: Reservation.first.id)
 
-    @review2 = Review.create(description: "Great place, close to subway!", rating: 4, guest_id: User.find_by(id: 5).id, listing_id: Listing.find_by(id: 2).id)
+    @review2 = Review.create(description: "Great place, close to subway!", rating: 4, guest_id: User.find_by(id: 5).id, reservation_id: Reservation.first.id)
 
-    @review3 = Review.create(description: "Meh, the host I shared a room with snored.", rating: 3, guest_id: User.find_by(id: 6).id, listing_id: Listing.last.id)
+    @review3 = Review.create(description: "Meh, the host I shared a room with snored.", rating: 3, guest_id: User.find_by(id: 6).id, reservation_id: Reservation.last.id)
   end
 end
