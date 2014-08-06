@@ -1,9 +1,6 @@
 ---
 tags: rails, full application, associations, migrations, foreign keys
 language: ruby
-unit: rails
-module: Building Complete Apps
-level: advanced
 resources: 1
 ---
 
