@@ -1,4 +1,88 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/show'
+
+  get 'users/edit'
+
+  get 'users/create'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  get 'reviews/index'
+
+  get 'reviews/new'
+
+  get 'reviews/show'
+
+  get 'reviews/edit'
+
+  get 'reviews/create'
+
+  get 'reviews/update'
+
+  get 'reviews/destroy'
+
+  get 'reservations/index'
+
+  get 'reservations/new'
+
+  get 'reservations/show'
+
+  get 'reservations/edit'
+
+  get 'reservations/create'
+
+  get 'reservations/update'
+
+  get 'reservations/destroy'
+
+  get 'neighborhoods/index'
+
+  get 'neighborhoods/new'
+
+  get 'neighborhoods/show'
+
+  get 'neighborhoods/edit'
+
+  get 'neighborhoods/create'
+
+  get 'neighborhoods/update'
+
+  get 'neighborhoods/destroy'
+
+  get 'listings/index'
+
+  get 'listings/new'
+
+  get 'listings/show'
+
+  get 'listings/edit'
+
+  get 'listings/create'
+
+  get 'listings/update'
+
+  get 'listings/destroy'
+  # 
+  # get 'cities/index'
+  #
+  # get 'cities/new'
+  #
+  # get 'cities/show'
+  #
+  # get 'cities/edit'
+  #
+  # get 'cities/create'
+  #
+  # get 'cities/update'
+  #
+  # get 'cities/destroy'
+
   resources :users
 
   resources :listings
