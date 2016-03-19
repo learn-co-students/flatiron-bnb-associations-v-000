@@ -10,7 +10,6 @@ describe User do
   end
 
   it 'as a guest has many trips' do
-# binding.pry
     expect(@tristan.trips).to include(@reservation2)
   end
 
