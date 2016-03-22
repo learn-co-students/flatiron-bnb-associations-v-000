@@ -42,11 +42,11 @@ RSpec.configure do |config|
 
   DatabaseCleaner.strategy = :truncation
 
-  config.after(:all) do 
+  config.after(:all) do
     DatabaseCleaner.clean
   end
 
-  config.before(:each) do 
+  config.before(:each) do
     cities = City.create([{ name: 'NYC' }, { name: 'San Fransisco' }])
 
     @nabe1 = Neighborhood.create(name: 'Fi Di', city_id: City.first.id)
