@@ -1,15 +1,15 @@
 require 'rails_helper'
 
 describe Reservation do
-  it 'has a checkin time' do 
+  it 'has a checkin time' do
     expect(@reservation1.checkin).to eq(Date.parse('2014-04-25'))
   end
 
   it 'has a checkout time' do
-    expect(@reservation1.checkout).to eq(Date.parse('2014-04-30')) 
+    expect(@reservation1.checkout).to eq(Date.parse('2014-04-30'))
   end
 
-  it 'belongs to a guest' do 
+  it 'belongs to a guest' do
     expect(@reservation1.guest).to eq(@logan)
   end
 
