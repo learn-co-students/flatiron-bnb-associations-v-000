@@ -14,4 +14,24 @@ describe City do
 
     expect(new_york_city.neighborhoods).to eq([financial_district, green_point, brighton_beach])
   end
+
+  context 'listings' do
+    let(:user) { User.create(name: "user") }
+    let(:fidi) { Neighborhood.create(name: 'Fi Di', city: nyc) }
+    let!(:listing) do
+      Listing.create(
+        address: '123 Main Street',
+        listing_type: "private room",
+        title: "Beautiful Apartment on Main Street",
+        description: "My apartment is great. there's a bedroom. close to subway....blah blah",
+        price: 50.00,
+        neighborhood: fidi,
+        host: user
+      )
+    end
+
+    it 'has many listings through neighborhoods' do
+      expect(nyc.listings).to include(listing)
+    end
+  end
 end
