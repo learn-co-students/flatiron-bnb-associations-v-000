@@ -5,11 +5,11 @@ describe Neighborhood do
     expect(@nabe3.name).to eq('Brighton Beach')
   end
 
-  it 'belongs to a city' do 
+  it 'belongs to a city' do
     expect(@nabe3.city.name).to eq('NYC')
   end
 
-  it 'has many listings' do 
+  it 'has many listings' do
     expect(@nabe3.listings).to eq([@listing3])
   end
 
