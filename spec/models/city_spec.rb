@@ -1,18 +1,18 @@
 require 'rails_helper'
 
 describe City do
-  let(:new_york_city) { City.create(name: 'NYC') }
+  let(:nyc) { City.create(name: 'NYC') }
 
   it 'has a name' do
-    expect(new_york_city.name).to eq('NYC')
+    expect(nyc.name).to eq('NYC')
   end
 
   it 'has many neighborhoods' do
-    financial_district = Neighborhood.create(name: 'Fi Di', city: new_york_city)
-    green_point = Neighborhood.create(name: 'Green Point', city: new_york_city)
-    brighton_beach = Neighborhood.create(name: 'Brighton Beach', city: new_york_city)
+    financial_district = Neighborhood.create(name: 'Fi Di', city: nyc)
+    green_point = Neighborhood.create(name: 'Green Point', city: nyc)
+    brighton_beach = Neighborhood.create(name: 'Brighton Beach', city: nyc)
 
-    expect(new_york_city.neighborhoods).to eq([financial_district, green_point, brighton_beach])
+    expect(nyc.neighborhoods).to eq([financial_district, green_point, brighton_beach])
   end
 
   context 'listings' do
