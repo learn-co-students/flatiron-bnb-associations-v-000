@@ -30,8 +30,5 @@ describe City do
       )
     end
 
-    it 'has many listings through neighborhoods' do
-      expect(nyc.listings).to include(listing)
-    end
   end
 end

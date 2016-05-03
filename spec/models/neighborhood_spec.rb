@@ -1,4 +1,4 @@
-equire 'rails_helper'
+require 'rails_helper'
 
 describe Neighborhood do
   let(:nyc) { City.create(name: 'NYC') }
