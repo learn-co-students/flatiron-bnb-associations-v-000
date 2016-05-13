@@ -2,6 +2,6 @@ class Listing < ActiveRecord::Base
   belongs_to  :neighborhood
   belongs_to  :host, :class_name => "User"
   has_many    :reservations
-  has_many    :reviews, :through => :reservation_id
+  has_many    :reviews, :through => :guests
   has_many    :guests, :through => :reservations
 end
