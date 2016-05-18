@@ -1,3 +1,0 @@
-class Host < User
-  
-end
