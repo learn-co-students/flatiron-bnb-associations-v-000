@@ -7,6 +7,7 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :reservation_id
       t.integer :listing_id
       t.integer :user_id
+      t.string :guest_type
       t.timestamps null: false
     end
   end
