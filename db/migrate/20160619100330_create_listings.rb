@@ -6,6 +6,7 @@ class CreateListings < ActiveRecord::Migration
     	t.string :address
     	t.string :listing_type
     	t.float :price
+    	
     	t.references :neighborhood
     	t.references :host
 

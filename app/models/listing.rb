@@ -4,5 +4,5 @@ class Listing < ActiveRecord::Base
 	has_many :reviews, through: :reservations
 	has_many :cities, through: :neighborhoods
 	belongs_to :host, :class_name => "User"
-	belongs_to :guest, :class_name => "User"
+    has_many :guests, through: :reservations
 end
