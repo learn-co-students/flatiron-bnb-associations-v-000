@@ -20,8 +20,15 @@ ActiveRecord::Schema.define(version: 20160729183342) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",                                    null: false
+    t.string   "description"
+    t.string   "address",                                  null: false
+    t.string   "listing_type",                             null: false
+    t.decimal  "price",           precision: 10, scale: 2
+    t.integer  "neighborhood_id",                          null: false
+    t.integer  "host_id",                                  null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "neighborhoods", force: :cascade do |t|
@@ -50,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160729183342) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
