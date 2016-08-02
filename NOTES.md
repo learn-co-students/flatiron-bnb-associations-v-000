@@ -1,3 +1,62 @@
+katie = User.create(name: "Katie")
+
+  nyc = City.create(name: 'NYC')
+    green_point = Neighborhood.create(name: 'Green Point', city: nyc)
+    listing = Listing.create(
+        address: '6 Maple Street',
+        listing_type: "shared room",
+        title: "Shared room in apartment",
+        description: "share a room with me because I'm poor",
+        price: 15.00,
+        neighborhood: green_point,
+        host: katie
+      )
+    logan= User.create(name: "Logan")
+    reservation =
+      Reservation.create(
+        checkin: '2014-04-25',
+        checkout: '2014-04-30',
+        listing: listing,
+        guest: logan
+      )
+
+
+  
+
+    context "as guest" do
+      let(:review) do
+        Review.create(
+          description: "Meh, the host I shared a room with snored.",
+          rating: 3,
+          guest: logan,
+          reservation: reservation
+        )
+      end
+
+      it 'has many trips' do
+        expect(logan.trips).to include(reservation)
+      end
+
+
+      it 'has written many reviews' do
+        expect(logan.reviews).to include(review)
+      end
+    end
+  end
+end
+
+
+
+class Listing < ActiveRecord::Base
+  belongs_to :host, class_name: 'User'
+  belongs_to :neighborhood
+
+  has_many :guests, through: :reservations, class_name: 'User'
+  has_many :reservations
+  has_many :reviews, through: :reservations
+end
+
+
 rails generate migration CreateReviews description:text rating:integer guest_id:integer reservation_id:integer
 
 
