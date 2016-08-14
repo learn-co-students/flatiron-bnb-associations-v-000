@@ -41,3 +41,4 @@ describe Reservation do
     expect(reservation.listing).to eq(listing)
   end
 end
+
