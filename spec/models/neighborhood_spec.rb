@@ -31,3 +31,4 @@ describe Neighborhood do
     end
   end
 end
+
