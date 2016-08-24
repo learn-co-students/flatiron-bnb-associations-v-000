@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :reservations
   resources :users
-
   resources :listings
-
   resources :neighborhoods
-
   resources :cities
 
   # The priority is based upon order of creation: first created -> highest priority.
