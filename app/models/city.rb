@@ -1,5 +1,7 @@
 class City < ActiveRecord::Base
+  # has many neighborhoods
   has_many :neighborhoods
-  belongs_to :listing
+  # has many listings through neighborhoods
+  has_many :listings, through: :neighborhoods
 
 end

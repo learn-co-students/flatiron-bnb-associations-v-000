@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824023821) do
+ActiveRecord::Schema.define(version: 20160824041302) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "neighborhood_id"
   end
+
+  add_index "cities", ["neighborhood_id"], name: "index_cities_on_neighborhood_id"
 
   create_table "listings", force: :cascade do |t|
     t.string   "address"
@@ -28,8 +31,10 @@ ActiveRecord::Schema.define(version: 20160824023821) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "neighborhood_id"
+    t.integer  "host_id"
   end
 
+  add_index "listings", ["host_id"], name: "index_listings_on_host_id"
   add_index "listings", ["neighborhood_id"], name: "index_listings_on_neighborhood_id"
 
   create_table "neighborhoods", force: :cascade do |t|
@@ -47,8 +52,10 @@ ActiveRecord::Schema.define(version: 20160824023821) do
     t.integer  "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "guest_id"
   end
 
+  add_index "reservations", ["guest_id"], name: "index_reservations_on_guest_id"
   add_index "reservations", ["listing_id"], name: "index_reservations_on_listing_id"
 
   create_table "reviews", force: :cascade do |t|
