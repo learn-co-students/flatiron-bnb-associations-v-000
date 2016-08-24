@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   ### as a guest ###
   # has many trips
-  has_many :trips, class_name: 'reservation', foreign_key 'guest_id'
+  has_many :trips, class_name: 'reservation', foreign_key: 'guest_id'
   # has written many reviews
   has_many :reviews, foreign_key: :guest_id
 end
