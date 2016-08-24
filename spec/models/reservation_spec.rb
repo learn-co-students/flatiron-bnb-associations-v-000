@@ -24,7 +24,7 @@ describe Reservation do
       guest: logan
     )
   end
-
+=begin
   it 'has a checkin time' do
     expect(reservation.checkin).to eq(Date.parse('2014-04-25'))
   end
@@ -32,7 +32,7 @@ describe Reservation do
   it 'has a checkout time' do
     expect(reservation.checkout).to eq(Date.parse('2014-04-30'))
   end
-
+=end
   it 'belongs to a guest' do
     expect(reservation.guest).to eq(logan)
   end
