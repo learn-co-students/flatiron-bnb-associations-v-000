@@ -1,7 +1,8 @@
 class Listing < ActiveRecord::Base
+  # belongs to a host
   belongs_to :user
-  belongs_to :city
-  # has_one :neighborhood, through: cities #plural?
+  # belongs to a neighborhood
+  belongs_to :neighborhood
   # has many reservations
   has_many :reservations
   # has many reviews through reservations
