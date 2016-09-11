@@ -1,5 +1,4 @@
 
-
 # Flatiron-bnb: Associations
 
 We're going to build Airbnb. Really. We're going to take this in steps. First let's work on our model associations and write migrations. This will be challenging, but doable. Take it slow and work together. Follow the model specs.
