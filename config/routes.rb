@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :trips
+
+  resources :guests
+
+  resources :reviews
+
+  resources :reservations
+
   resources :users
 
   resources :listings
