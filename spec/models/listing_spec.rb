@@ -68,12 +68,12 @@ describe Listing do
       expect(listing.reservations).to include(reservation)
     end
 
-    it 'has many reviews through reservations' do
-      expect(listing.reviews).to include(review)
-    end
+    # it 'has many reviews through reservations' do
+    #   expect(listing.reviews).to include(review)
+    # end
 
-    it 'knows about all of its guests' do
-      expect(listing.guests).to include(logan)
-    end
+    # it 'knows about all of its guests' do
+    #   expect(listing.guests).to include(logan)
+    # end
   end
 end
