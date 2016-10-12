@@ -1,6 +1,6 @@
 class Reservation < ActiveRecord::Base
   belongs_to :listing
-  belongs_to :review
+  has_one :review
   belongs_to :guest, :class_name => "User"
 
 end

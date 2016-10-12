@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def reviews
     Review.all
   end
+
+  # answer had the below alternative
+  # has_many :trips, class_name: 'Reservation', foreign_key: 'guest_id'
+  # has_many :reviews, foreign_key: 'guest_id'
 end
