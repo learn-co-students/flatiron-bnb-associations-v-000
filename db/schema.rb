@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20161102023107) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.string   "checkin"
-    t.string   "checkout"
+    t.date     "checkin"
+    t.date     "checkout"
     t.integer  "listing_id"
     t.integer  "guest_id"
     t.datetime "created_at", null: false
