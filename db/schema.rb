@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20161130210418) do
     t.decimal  "price"
     t.integer  "neighborhood_id"
     t.integer  "host_id"
+    t.integer  "guest_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
