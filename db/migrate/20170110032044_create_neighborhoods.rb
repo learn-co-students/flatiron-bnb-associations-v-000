@@ -3,6 +3,7 @@ class CreateNeighborhoods < ActiveRecord::Migration
     create_table :neighborhoods do |t|
       t.string :name
       t.belongs_to :city
+      t.integer :city_id
 
       t.timestamps null: false
     end

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170110032752) do
     t.string   "address"
     t.string   "listing_type"
     t.decimal  "price"
-    t.integer  "user_id"
+    t.integer  "host_id"
     t.integer  "neighborhood_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20170110032752) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.date     "check_in"
-    t.date     "check_out"
+    t.date     "checkin"
+    t.date     "checkout"
     t.integer  "guest_id"
     t.integer  "listing_id"
     t.datetime "created_at", null: false

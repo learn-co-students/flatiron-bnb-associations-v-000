@@ -7,7 +7,9 @@ class CreateListings < ActiveRecord::Migration
       t.string :listing_type
       t.decimal :price
       t.belongs_to :user
+      t.integer :host_id
       t.belongs_to :neighborhood
+      t.integer :neighborhood_id
 
       t.timestamps null: false
     end
