@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20170112004111_create_cities.rb
+      create    app/models/city.rb
+      invoke    rspec
+    conflict      spec/models/city_spec.rb
+[?1034h    Overwrite /Users/tsj/Development/code/flatiron-bnb-associations-v-000/spec/models/city_spec.rb? (enterr "h" for help) [Ynaqdh]       has_many :reviews, :foreign_key => 'guest_id'exit
