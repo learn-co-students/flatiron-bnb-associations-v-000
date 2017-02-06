@@ -40,3 +40,5 @@ group :development, :test do
   gem "pry"
   gem 'rack_session_access'
 end
+
+gem 'learn-co'
