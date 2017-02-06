@@ -6,3 +6,4 @@ class User < ActiveRecord::Base
   has_many :reviews, :foreign_key => 'guest_id'
 
 end
+# changes
