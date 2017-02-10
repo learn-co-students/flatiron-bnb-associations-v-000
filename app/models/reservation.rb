@@ -1,6 +1,6 @@
+# My solution file
 class Reservation < ActiveRecord::Base
   belongs_to :guest, :class_name => "User"
   belongs_to :listing
-  belongs_to :trip
-  has_many :reviews
+  has_one :review
 end
