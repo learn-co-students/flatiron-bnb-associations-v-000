@@ -45,7 +45,7 @@ describe Listing do
     expect(listing.host.name).to eq("Amanda")
   end
 
-  context 'reservations (and guests) and reviews' do
+  context 'associations' do
     let!(:reservation) do
       Reservation.create(
         checkin: '2014-04-25',
