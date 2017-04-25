@@ -1,0 +1,2 @@
+class NeighbourhoodsController < ApplicationController
+end
