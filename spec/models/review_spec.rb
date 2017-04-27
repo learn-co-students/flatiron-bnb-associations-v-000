@@ -38,7 +38,7 @@ describe Review do
   end
 
   it 'has a rating' do
-    expect(review.rating).to eq(5)
+    expect(review.rating).to eq("5")
   end
 
   it 'belongs to a guest' do
