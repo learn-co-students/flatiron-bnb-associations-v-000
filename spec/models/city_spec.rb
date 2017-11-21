@@ -17,7 +17,7 @@ describe City do
 
   context 'listings' do
     let(:user) { User.create(name: "user") }
-    let(:fidi) { Neighborhood.create(name: 'Fi Di', city: nyc) }
+    let(:fidi) { Neighborhood.create(name: 'Fi Di', city: new_york_city) }
     let!(:listing) do
       Listing.create(
         address: '123 Main Street',
@@ -31,7 +31,7 @@ describe City do
     end
 
     it 'has many listings through neighborhoods' do
-      expect(nyc.listings).to include(listing)
+      expect(new_york_city.listings).to include(listing)
     end
   end
 end
