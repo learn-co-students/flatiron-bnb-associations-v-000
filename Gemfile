@@ -26,6 +26,7 @@ gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rails-erd'
 
 group :development, :test do
   gem "rspec-rails"
