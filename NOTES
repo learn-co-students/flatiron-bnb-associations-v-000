@@ -1,0 +1,50 @@
+class City
+  name:string
+
+  has_many :neighborhoods
+
+class Listing
+  title:string
+  description:string
+  address:string
+  listing_type:string
+  price:decimal scale 2
+
+  belongs_to :neighborhood
+  belongs_to :host, class_name: 'User'
+  has_many :reservations
+  has_many :reviews, through: :reservations
+  has_many :guests, class_name: 'User'
+
+class Neighborhood
+  name:string
+
+  belongs_to :city
+  has_many :listings
+
+class Reservation
+  checkin:date
+  checkout:date
+
+  belongs_to :guest, class_name: 'User'
+  belongs_to :listing
+  has_one :review
+
+class Review
+  description:string
+  rating:integer
+
+  belongs_to :guest, class_name: 'User'
+  belongs_to :reservation
+
+class User
+  name:string
+
+  has_many :listings, :foreign_key => 'host_id'
+    host user has many listings: @host_user.listings
+  has_many :reservations, through: :listings
+    host user has many reservations through listings: @host_user.reservations
+  has_many :trips, class_name: 'Reservation', :foreign_key => 'guest_id'
+    guest user has many trips(reservations): @guest_user.trips
+  has_many :reviews, :foreign_key => 'guest_id'
+    guest user has many reviews: @guest_user.reviews
