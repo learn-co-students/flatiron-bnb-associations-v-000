@@ -1,0 +1,3 @@
+
+class ListingsController < ApplicationController
+end
