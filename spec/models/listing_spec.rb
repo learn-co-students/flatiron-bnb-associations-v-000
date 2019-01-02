@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe Listing do
   let(:new_york_city) { City.create(name: 'NYC') }
   let(:financial_district) { Neighborhood.create(name: 'Fi Di', city: new_york_city) }
