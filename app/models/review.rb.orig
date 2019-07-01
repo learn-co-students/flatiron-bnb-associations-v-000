@@ -1,9 +1,0 @@
-class Review < ActiveRecord::Base
-<<<<<<< HEAD
-  belongs_to :reservation
-  belongs_to :guest, :class_name => "User"
-=======
-  belongs_to :guest, class_name: 'User'
-  belongs_to :reservation
->>>>>>> Rewrite tests to separate concerns
-end
