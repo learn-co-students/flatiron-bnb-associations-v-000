@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-   #Host
    has_many :listings, :foreign_key => 'host_id'
    has_many :reservations, through: :listings, :foreign_key => 'host_id'
 
