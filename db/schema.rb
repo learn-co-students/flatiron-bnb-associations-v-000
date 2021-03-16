@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201222050223) do
+ActiveRecord::Schema.define(version: 20210316033511) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20201222050223) do
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string   "name"
-    t.string   "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "city_id"
@@ -45,7 +44,6 @@ ActiveRecord::Schema.define(version: 20201222050223) do
     t.datetime "updated_at", null: false
     t.integer  "listing_id"
     t.integer  "guest_id"
-    t.integer  "host_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -54,7 +52,6 @@ ActiveRecord::Schema.define(version: 20201222050223) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "guest_id"
-    t.integer  "listing_id"
     t.integer  "reservation_id"
   end
 
